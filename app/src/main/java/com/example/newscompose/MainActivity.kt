@@ -18,19 +18,6 @@ import com.example.newscompose.ui.theme.White
 import dev.tontech.news_app_yt.viewModels.NewsUIState
 import dev.tontech.news_app_yt.viewModels.NewsViewModel
 
-data class Suggestion(val title: String = "", var isFocused: Boolean = false)
-
-object SuggestionsList {
-    val list: List<Suggestion> = listOf(
-        Suggestion("All", true),
-        Suggestion("Politic"),
-        Suggestion("Sport"),
-        Suggestion("Education"),
-        Suggestion("Economy"),
-        Suggestion("Technology")
-    )
-}
-
 class MainActivity : ComponentActivity() {
     private val vm: NewsViewModel by viewModels { NewsViewModel.Factory }
     private val state = mutableStateOf<NewsUIState>(NewsUIState.Loading)
