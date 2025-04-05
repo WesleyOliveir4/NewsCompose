@@ -42,12 +42,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
-import com.example.newscompose.Suggestion
-import com.example.newscompose.SuggestionsList
 import com.example.newscompose.model.News
 import com.example.newscompose.model.NewsResults
 import com.example.newscompose.network.NewsApi
 import com.example.newscompose.repositories.NewsRepository
+import com.example.newscompose.ui.components.Suggestion
+import com.example.newscompose.ui.components.SuggestionsList
 import com.example.newscompose.ui.theme.BlackTextColor
 import com.example.newscompose.ui.theme.Blue
 import com.example.newscompose.ui.theme.Gray
