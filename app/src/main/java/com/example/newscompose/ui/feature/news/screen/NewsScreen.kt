@@ -1,4 +1,4 @@
-package com.example.newscompose.ui.feature
+package com.example.newscompose.ui.feature.news.screen
 
 import NewsappytTheme
 import androidx.compose.foundation.Image
@@ -53,7 +53,7 @@ import com.example.newscompose.ui.theme.Blue
 import com.example.newscompose.ui.theme.Gray
 import com.example.newscompose.ui.theme.GrayTextColor
 import com.example.newscompose.ui.theme.White
-import dev.tontech.news_app_yt.viewModels.NewsViewModel
+import com.example.newscompose.ui.feature.news.viewmodel.NewsViewModel
 
 
 

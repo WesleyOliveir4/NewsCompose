@@ -13,16 +13,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.newscompose.ui.feature.NewsScreen
+import com.example.newscompose.ui.feature.news.screen.NewsScreen
+import com.example.newscompose.ui.feature.news.state.NewsUIState
 import com.example.newscompose.ui.theme.White
-import dev.tontech.news_app_yt.viewModels.NewsUIState
-import dev.tontech.news_app_yt.viewModels.NewsViewModel
+import com.example.newscompose.ui.feature.news.viewmodel.NewsViewModel
 
 class MainActivity : ComponentActivity() {
     private val vm: NewsViewModel by viewModels { NewsViewModel.Factory }
     private val state = mutableStateOf<NewsUIState>(NewsUIState.Loading)
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // agregar o trecho do when na propia screen e criar um navhost para inicializar a screen
         vm.fetchNews()
 
         vm.newsUIState.observe(this) {
