@@ -1,4 +1,4 @@
-package dev.tontech.news_app_yt.viewModels
+package com.example.newscompose.ui.feature.news.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,17 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
-import com.example.newscompose.model.News
 import com.example.newscompose.network.NewsApi
 import com.example.newscompose.repositories.NewsRepository
+import com.example.newscompose.ui.feature.news.state.NewsUIState
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
-sealed class NewsUIState {
-    object Loading: NewsUIState()
-    data class Success(val news: News): NewsUIState()
-    data class Error(val message: String): NewsUIState()
-}
 
 class NewsViewModel(private val repository: NewsRepository): ViewModel() {
     private val _newsUiState = MutableLiveData<NewsUIState>()
@@ -36,6 +31,9 @@ class NewsViewModel(private val repository: NewsRepository): ViewModel() {
         }
     }
 
+
+
+// Utilizar o Koin para criar a instancia do viewmodel
     @Suppress("UNCHECKED_CAST")
     companion object {
         val Factory: ViewModelProvider.Factory = object : ViewModelProvider.Factory {
